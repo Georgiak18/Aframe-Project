@@ -1,0 +1,248 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/aframe-extras@7.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+	<script src="script.js"></script>
+	<script src="animal.js"></script>
+	<script src="fruit.js"></script>
+	
+  </head>
+  <body>
+    <a-scene physics="debug: false">
+	
+		<a-entity id="house" class="house" position="0 0 3" static-body>
+	 
+	  <a-entity class="room">
+            <a-entity class="wall" position= "0 0 0">
+				<a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" position="0 0 -6">
+                <a-box width="2" height="3.25" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3.25" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="2.7" depth="0.2" color="black" opacity="1" position="0 1.36 0" ></a-box>
+				<a-cylinder radius="0.05" height="0.1" color="black" position="-.7 1 -0.1" rotation="90 90 90" ></a-cylinder>
+            </a-entity>
+			<a-entity class="roof" position="0 7.5 -3">
+				<a-cylinder radius="3.75" width="6" height="7" segments-radial="3" rotation="270 0 0" color="blue"></a-cylinder>
+			</a-entity>
+		<a-entity class="room" position="0 3 0">
+            <a-entity class="wall">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" position="0 0 -6">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+      </a-entity>
+	</a-entity>
+	</a-entity>
+	
+		<a-entity id="house2" class="house" position="-66 0 -88" rotation="0 180 0" static-body>
+	 
+	  <a-entity class="room">
+            <a-entity class="wall" position= "0 0 0">
+				<a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" position="0 0 -6">
+                <a-box width="2" height="3.25" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3.25" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="2.7" depth="0.2" color="black" opacity="1" position="0 1.36 0" ></a-box>
+				<a-cylinder radius="0.05" height="0.1" color="black" position="-.7 1 -0.1" rotation="90 90 90" ></a-cylinder>
+            </a-entity>
+			<a-entity class="roof" position="0 7.5 -3">
+				<a-cylinder radius="3.75" width="6" height="7" segments-radial="3" rotation="270 0 0" color="blue"></a-cylinder>
+			</a-entity>
+		<a-entity class="room" position="0 3 0">
+            <a-entity class="wall">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" rotation="0 90 0" position="-3 0 -3">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+            <a-entity class="wall" position="0 0 -6">
+                <a-box width="2" height="3" depth="0.1" position="-2 1.5 0" ></a-box>
+                <a-box width="2" height="3" depth="0.1" position="2 1.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 0.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" position="0 2.5 0" ></a-box>
+                <a-box width="2" height="1" depth="0.1" color="blue" opacity="0.2" position="0 1.5 0" ></a-box>
+            </a-entity>
+      </a-entity>
+	</a-entity>
+	</a-entity>
+		
+		<a-entity class="tree" position="40 0 -45">
+			<a-sphere color="#074D34" position="0 4 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="-1 3 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="1 3 -5" radius="1.25"></a-sphere>
+			<a-cylinder color="#06400E" position="0 0.75 -5" radius="0.3" height="3.5"></a-cylinder>
+			<a-sphere id="fruit" position="-1.1 2.8 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 3.7 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1.8 2 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 2.3 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 3.8 -6.1" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1 3 -6.3" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 2.5 -6.2" radius="0.2" color="red"></a-sphere>
+			
+		</a-entity>
+		
+		<a-entity class="tree" position="69 0 33">
+			<a-sphere color="#074D34" position="0 4 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="-1 3 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="1 3 -5" radius="1.25"></a-sphere>
+			<a-cylinder color="#06400E" position="0 0.75 -5" radius="0.3" height="3.5"></a-cylinder>
+			<a-sphere id="fruit" position="-1.1 2.8 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 3.7 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1.8 2 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 2.3 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 3.8 -6.1" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1 3 -6.3" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 2.5 -6.2" radius="0.2" color="red"></a-sphere>
+		</a-entity>
+		
+		<a-entity class="tree" position="-73 0 25">
+			<a-sphere color="#074D34" position="0 4 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="-1 3 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="1 3 -5" radius="1.25"></a-sphere>
+			<a-cylinder color="#06400E" position="0 0.75 -5" radius="0.3" height="3.5"></a-cylinder>
+			<a-sphere id="fruit" position="-1.1 2.8 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="0.8 3.7 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-1.8 2 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="2.3 3 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-2.3 3 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="1 2.3 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="1 3.8 -6.1" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-1 3 -6.3" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="0.8 2.5 -6.2" radius="0.2" color="#FF4D00"></a-sphere>
+		</a-entity>
+		
+		<a-entity class="tree" position="-20 0 65">
+			<a-sphere color="#074D34" position="0 4 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="-1 3 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="1 3 -5" radius="1.25"></a-sphere>
+			<a-cylinder color="#06400E" position="0 0.75 -5" radius="0.3" height="3.5"></a-cylinder>
+			<a-sphere id="fruit" position="-1.1 2.8 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="0.8 3.7 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-1.8 2 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="2.3 3 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-2.3 3 -5" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="1 2.3 -3.8" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="1 3.8 -6.1" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="-1 3 -6.3" radius="0.2" color="#FF4D00"></a-sphere>
+			<a-sphere id="fruit" position="0.8 2.5 -6.2" radius="0.2" color="#FF4D00"></a-sphere>
+		</a-entity>
+		
+		<a-entity class="tree" position="-28 0 -70">
+			<a-sphere color="#074D34" position="0 4 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="-1 3 -5" radius="1.25"></a-sphere>
+			<a-sphere color="#074D34" position="1 3 -5" radius="1.25"></a-sphere>
+			<a-cylinder color="#06400E" position="0 0.75 -5" radius="0.3" height="3.5"></a-cylinder>
+			<a-sphere id="fruit" position="-1.1 2.8 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 3.7 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1.8 2 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-2.3 3 -5" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 2.3 -3.8" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="1 3.8 -6.1" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="-1 3 -6.3" radius="0.2" color="red"></a-sphere>
+			<a-sphere id="fruit" position="0.8 2.5 -6.2" radius="0.2" color="red"></a-sphere>
+		</a-entity> 
+			
+
+		<a-assets>
+			<a-asset-item id="wolf" src="wolf/scene.gltf" static-body ></a-asset-item>
+			<a-asset-item id="bear" src="bear_walk/scene.gltf" static-body></a-asset-item>
+		</a-assets>
+		<a-camera position="0 1.6 0">
+		 <a-cursor>
+          <a-text id="Fruitcollected" position="-3.5 1.5 -1" value="Fruit: " color="black"></a-text>
+        </a-cursor>
+		</a-camera>
+		<a-entity environment="preset: forest; groundColor: #0f4d0f; grid: cross; skyColor: #111184; horizonColor: #4B4BFF; groundColor2:#2E6F40; dressingColor:#027148;"></a-entity>
+		<a-plane color="black" position="0 0.01 0" rotation="-90 0 0" width="6" height="6"></a-plane>
+
+		
+    </a-scene>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bear Walk
+* source:	https://sketchfab.com/3d-models/bear-walk-ac9dd35ccb8b4b71804e2c30715d93db
+* author:	LostBoyz2078 (https://sketchfab.com/LostModels2025)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bear Walk" (https://sketchfab.com/3d-models/bear-walk-ac9dd35ccb8b4b71804e2c30715d93db) by LostBoyz2078 (https://sketchfab.com/LostModels2025) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
