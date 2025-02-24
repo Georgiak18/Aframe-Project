@@ -1,5 +1,5 @@
 let rnd = (l,u) => Math.random()*(u-l) + l;
-let animals = [],scene;
+let animals = [],scene, fruit_collected = 0;
 let Bear = {template:"#bear",scale:0.05,speed:0.05, rotation:-Math.PI / 2}
 let Wolf = {template:"#wolf",scale:1.0,speed:0.1, rotation:0}
 let creature = [Bear,Wolf], house;
@@ -11,6 +11,12 @@ window.onload = function(){
   house = document.getElementById("house");
   house2 = document.getElementById("house2");
  
+  for(let i = 0;i < 20; i++){
+    let x = rnd(-20,20);
+    let z = rnd(-20,20);
+    new fruit(x,1,z);
+    
+   }
 
   for(let i = 0; i < 6; i++){
     let x = rnd(-20,20);
