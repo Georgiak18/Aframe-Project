@@ -4,17 +4,20 @@ let Bear = {template:"#bear",scale:0.05,speed:0.05, rotation:-Math.PI / 2}
 let Wolf = {template:"#wolf",scale:1.0,speed:0.1, rotation:0}
 let creature = [Bear,Wolf], house;
 let chase = true;
+let treeTemplate;
+
 
 window.onload = function(){
   scene = document.querySelector("a-scene");
   camera = document.querySelector("a-camera");
   house = document.getElementById("house");
   house2 = document.getElementById("house2");
+  treeTemplate = document.getElementById("treeTemplate");
  
   for(let i = 0;i < 20; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
-    new fruit(x,1,z);
+    new fruits(x,1,z);
     
    }
 
@@ -28,7 +31,7 @@ window.onload = function(){
 }
 
 function loop(){
-  
+  Fruitcollected.setAttribute("value",`Fruits: ${fruit_collected}`);
   for(let animal of animals){
     let d = distance(animal.obj, camera);
 	let d2 = distance(house,camera);
@@ -57,6 +60,9 @@ function loop(){
 	
   }
 
+ // if (fruit_collected >= 20){
+
+ // }
 
   window.requestAnimationFrame(loop);
 }
