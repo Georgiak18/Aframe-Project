@@ -14,7 +14,7 @@ window.onload = function(){
   house2 = document.getElementById("house2");
   treeTemplate = document.getElementById("treeTemplate");
  
-  for(let i = 0;i < 20; i++){
+  for(let i = 0;i < 5; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     new fruits(x,1,z);
@@ -34,12 +34,12 @@ function loop(){
   Fruitcollected.setAttribute("value",`Fruits: ${fruit_collected}`);
   for(let animal of animals){
     let d = distance(animal.obj, camera);
-	let d2 = distance(house,camera);
+	//let d2 = distance(house,camera);
 	let d3 = distance(house2,camera);
 	if(chase){
 		if( d < 3){
 			animal.stop()
-			camera.setAttribute("position", "0 1.5 0");
+			camera.setAttribute("position", "-66 1.5 -86");
 			
 		}else{
 			animal.rotateTowards(camera);
@@ -50,9 +50,11 @@ function loop(){
       animal.forward() 	
 	}
 	
-    if(d2 < 5 ){
-		chase = false;	
-	}else if(d3 < 5){
+    //if(d2 < 5 ){
+		//chase = false;	
+	//}else
+  
+  if(d3 < 5){
 		chase = false;
 	}else{
 		chase = true;
@@ -60,9 +62,10 @@ function loop(){
 	
   }
 
- // if (fruit_collected >= 20){
-
- // }
+ if (fruit_collected >= 2){
+  console.log("You win!");
+  camera.setAttribute("position", "-66 1.5 -86");
+  }
 
   window.requestAnimationFrame(loop);
 }
