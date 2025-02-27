@@ -62,10 +62,12 @@ function loop(){
 	
   }
 
- if (fruit_collected >= 2){
+ if (fruit_collected >= 5){
   console.log("You win!");
+  camera.body.innerHTML = "You win!";
   camera.setAttribute("position", "-66 1.5 -86");
-  }
+  } 
+  
 
   window.requestAnimationFrame(loop);
 }
