@@ -64,7 +64,7 @@ function loop(){
 
  if (fruit_collected >= 5){
   console.log("You win!");
-  camera.body.innerHTML = "You win!";
+  document.body.innerHTML = "You win!";
   camera.setAttribute("position", "-66 1.5 -86");
   } 
   
