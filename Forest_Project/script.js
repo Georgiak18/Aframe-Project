@@ -5,6 +5,16 @@ let Wolf = {template:"#wolf",scale:1.0,speed:0.1, rotation:0}
 let creature = [Bear,Wolf], house;
 let chase = true;
 let treeTemplate;
+let messageDiv = document.createElement('div');
+messageDiv.style.position = 'absolute';
+messageDiv.style.top = '50%';
+messageDiv.style.left = '50%';
+messageDiv.style.transform = 'translate(-50%, -50%)';
+messageDiv.style.fontSize = '60px';
+messageDiv.style.fontWeight = 'bold';
+messageDiv.style.color = 'black';
+
+
 
 
 window.onload = function(){
@@ -13,8 +23,9 @@ window.onload = function(){
   house = document.getElementById("house");
   house2 = document.getElementById("house2");
   treeTemplate = document.getElementById("treeTemplate");
+  document.body.appendChild(messageDiv);
  
-  for(let i = 0;i < 5; i++){
+  for(let i = 0;i < 7; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     new fruits(x,1,z);
@@ -62,9 +73,9 @@ function loop(){
 	
   }
 
- if (fruit_collected >= 5){
-  console.log("You win!");
-  document.body.innerHTML = "You win!";
+ if (fruit_collected >= 2){
+  //document.body.innerHTML = "You win!";
+  messageDiv.textContent = 'You win';
   camera.setAttribute("position", "-66 1.5 -86");
   } 
   
