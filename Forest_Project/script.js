@@ -7,7 +7,7 @@ let chase = true;
 let treeTemplate;
 let messageDiv = document.createElement('div');
 messageDiv.style.position = 'absolute';
-messageDiv.style.top = '50%';
+messageDiv.style.top = '25%';
 messageDiv.style.left = '50%';
 messageDiv.style.transform = 'translate(-50%, -50%)';
 messageDiv.style.fontSize = '60px';
@@ -25,7 +25,7 @@ window.onload = function(){
   treeTemplate = document.getElementById("treeTemplate");
   document.body.appendChild(messageDiv);
  
-  for(let i = 0;i < 7; i++){
+  for(let i = 0;i < 5; i++){
     let x = rnd(-20,20);
     let z = rnd(-20,20);
     new fruits(x,1,z);
@@ -73,7 +73,7 @@ function loop(){
 	
   }
 
- if (fruit_collected >= 2){
+ if (fruit_collected >= 10){
   //document.body.innerHTML = "You win!";
   messageDiv.textContent = 'You win';
   camera.setAttribute("position", "-66 1.5 -86");
